@@ -10,11 +10,12 @@ import UIKit
 class AppendSiteViewController: UIViewController {
     
     
-    
+    var text : String?
     @IBOutlet weak var lbltitle: UILabel!
     @IBOutlet weak var txtSiteAddress: UITextField!
     @IBAction func btnSite(_ sender: UIButton) {
         performSegue(withIdentifier: "gotoMain", sender: nil)
+        
     }
     
     override func viewDidLoad() {
@@ -25,8 +26,9 @@ class AppendSiteViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoMain"{
-            if let vc = segue.destination as? MainTableViewController {
-                vc.receivedText = txtSiteAddress.text
+            text = txtSiteAddress.text   // https://m.blog.naver.com/jdub7138/220393890771
+            if let vc = segue.destination as? MainTableViewController{
+                vc.receivedText = text
             }
         }
     }

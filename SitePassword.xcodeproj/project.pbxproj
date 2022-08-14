@@ -14,6 +14,7 @@
 		CB1FE51E28A789D700DAC509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1FE51D28A789D700DAC509 /* Assets.xcassets */; };
 		CB1FE52128A789D700DAC509 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1FE51F28A789D700DAC509 /* LaunchScreen.storyboard */; };
 		CB1FE52928A7900900DAC509 /* AppendSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1FE52828A7900900DAC509 /* AppendSiteViewController.swift */; };
+		CB348C7A28A927C200BD6A02 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB348C7928A927C200BD6A02 /* MainTableViewCell.swift */; };
 		CBDCC71228A79BF400E3D1C5 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCC71128A79BF400E3D1C5 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		CB1FE52028A789D700DAC509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB1FE52228A789D700DAC509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB1FE52828A7900900DAC509 /* AppendSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendSiteViewController.swift; sourceTree = "<group>"; };
+		CB348C7928A927C200BD6A02 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		CBDCC71128A79BF400E3D1C5 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 				CB1FE51628A789D700DAC509 /* SceneDelegate.swift */,
 				CB1FE51828A789D700DAC509 /* ViewController.swift */,
 				CBDCC71128A79BF400E3D1C5 /* MainTableViewController.swift */,
+				CB348C7928A927C200BD6A02 /* MainTableViewCell.swift */,
 				CB1FE52828A7900900DAC509 /* AppendSiteViewController.swift */,
 				CB1FE51A28A789D700DAC509 /* Main.storyboard */,
 				CB1FE51D28A789D700DAC509 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				CB1FE52928A7900900DAC509 /* AppendSiteViewController.swift in Sources */,
 				CB1FE51528A789D700DAC509 /* AppDelegate.swift in Sources */,
 				CBDCC71228A79BF400E3D1C5 /* MainTableViewController.swift in Sources */,
+				CB348C7A28A927C200BD6A02 /* MainTableViewCell.swift in Sources */,
 				CB1FE51728A789D700DAC509 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SiteAddress" rowHeight="49" id="7V3-CA-tJe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SiteAddress" rowHeight="49" id="7V3-CA-tJe" customClass="MainTableViewCell" customModule="SitePassword" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7V3-CA-tJe" id="sGk-rA-shS">
@@ -38,6 +38,9 @@
                                         <constraint firstAttribute="bottom" secondItem="DdK-cw-eTC" secondAttribute="bottom" id="jbx-Vh-4us"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="List" destination="DdK-cw-eTC" id="aeL-hS-BE9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -53,9 +56,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="list" destination="DdK-cw-eTC" id="lb5-qa-ZqV"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zl9-b1-CqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,6 +99,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btnSite:" destination="cBO-T4-uM4" eventType="touchUpInside" id="cmh-Ce-CSm"/>
+                                    <segue destination="i7q-Yw-TW1" kind="show" identifier="gotoMain" id="4pU-tm-C5d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,9 +108,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="사이트 추가" id="Klb-d7-dMu"/>
                     <connections>
-                        <outlet property="lbltitle" destination="8Mq-1b-R6Z" id="xFm-Th-20Z"/>
                         <outlet property="txtSiteAddress" destination="ETX-LV-1Iu" id="ubE-0m-jTa"/>
-                        <segue destination="i7q-Yw-TW1" kind="show" identifier="gotoMain" id="6J7-ye-GPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkS-e1-ufe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -134,7 +133,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T83-x8-aH3"/>
+        <segue reference="4pU-tm-C5d"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

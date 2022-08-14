@@ -8,14 +8,12 @@
 import UIKit
 
 class MainTableViewController: UITableViewController {
-    @IBAction func appendSite(_ sender: Any) {
-    }
-    @IBOutlet weak var list: UILabel!
+//    @IBAction func appendSite(_ sender: Any) {
+//    }
     var receivedText : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        list.text = receivedText
 
     }
     
