@@ -11,7 +11,7 @@
         <!--메인 화면-->
         <scene sceneID="IJf-Zw-w7S">
             <objects>
-                <tableViewController id="i7q-Yw-TW1" customClass="MainTableViewController" customModule="SitePassword" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Main" modalPresentationStyle="fullScreen" id="i7q-Yw-TW1" customClass="MainTableViewController" customModule="SitePassword" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Main" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="I5i-2Z-V7D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +23,20 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7V3-CA-tJe" id="sGk-rA-shS">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdK-cw-eTC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DdK-cw-eTC" firstAttribute="leading" secondItem="sGk-rA-shS" secondAttribute="leading" id="Shw-zI-rVb"/>
+                                        <constraint firstItem="DdK-cw-eTC" firstAttribute="top" secondItem="sGk-rA-shS" secondAttribute="top" id="bb6-de-1bc"/>
+                                        <constraint firstAttribute="trailing" secondItem="DdK-cw-eTC" secondAttribute="trailing" id="i5X-kv-rPd"/>
+                                        <constraint firstAttribute="bottom" secondItem="DdK-cw-eTC" secondAttribute="bottom" id="jbx-Vh-4us"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -39,15 +53,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="list" destination="DdK-cw-eTC" id="lb5-qa-ZqV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zl9-b1-CqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="96.428571428571431"/>
+            <point key="canvasLocation" x="751" y="96"/>
         </scene>
         <!--사이트 추가-->
         <scene sceneID="y7x-r2-WgU">
             <objects>
-                <viewController storyboardIdentifier="Site" id="cBO-T4-uM4" customClass="AppendSiteViewController" customModule="SitePassword" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Site" modalPresentationStyle="fullScreen" id="cBO-T4-uM4" customClass="AppendSiteViewController" customModule="SitePassword" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qeM-lK-pM6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,11 +109,12 @@
                     <connections>
                         <outlet property="lbltitle" destination="8Mq-1b-R6Z" id="xFm-Th-20Z"/>
                         <outlet property="txtSiteAddress" destination="ETX-LV-1Iu" id="ubE-0m-jTa"/>
+                        <segue destination="i7q-Yw-TW1" kind="show" identifier="gotoMain" id="6J7-ye-GPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkS-e1-ufe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575.3623188405797" y="105.80357142857143"/>
+            <point key="canvasLocation" x="1575" y="96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pel-h6-tNn">
@@ -115,6 +133,9 @@
             <point key="canvasLocation" x="-96" y="97"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="T83-x8-aH3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
