@@ -11,19 +11,18 @@ class MainTableViewCell: UITableViewCell {
     
 //    @IBAction func myExit(sender: UIStoryboardSegue){
 //    }
-//
-    
-    var receivedText : String?
+
+    @IBOutlet weak var List: UILabel!
+    var recivedText : String?  
    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    @IBOutlet weak var List: UILabel!
+
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        List.text = receivedText
 
         // Configure the view for the selected state
     }

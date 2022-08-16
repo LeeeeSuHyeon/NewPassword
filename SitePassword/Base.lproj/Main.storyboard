@@ -39,7 +39,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="List" destination="DdK-cw-eTC" id="aeL-hS-BE9"/>
+                                    <outlet property="List" destination="DdK-cw-eTC" id="PRL-Qf-rLz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -99,7 +99,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btnSite:" destination="cBO-T4-uM4" eventType="touchUpInside" id="cmh-Ce-CSm"/>
-                                    <segue destination="i7q-Yw-TW1" kind="show" identifier="gotoMain" id="4pU-tm-C5d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,6 +108,7 @@
                     <navigationItem key="navigationItem" title="사이트 추가" id="Klb-d7-dMu"/>
                     <connections>
                         <outlet property="txtSiteAddress" destination="ETX-LV-1Iu" id="ubE-0m-jTa"/>
+                        <segue destination="i7q-Yw-TW1" kind="show" identifier="gotoMain" id="URo-rU-ThO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkS-e1-ufe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -133,7 +133,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4pU-tm-C5d"/>
+        <segue reference="SHa-a0-SuW"/>
+        <segue reference="URo-rU-ThO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
