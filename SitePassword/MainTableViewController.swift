@@ -11,12 +11,13 @@ class MainTableViewController: UITableViewController{
 //    @IBAction func appendSite(_ sender: Any) {
 //    }
     var receivedText : String?              // AppendSiteController에서 prepare로 보낸 텍스트 들어옴. 옵셔널 형
+    var items = [String]()
         override func viewDidLoad() {
         super.viewDidLoad()
-            if let a = receivedText{
-                print(a)
+            if let item = receivedText{
+                items.append(item)
+                self.tableView.reloadSections(IndexSet(1...1), with: .automatic)
             }
-
     }
     
 
@@ -29,15 +30,13 @@ class MainTableViewController: UITableViewController{
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1            // 아마 배열로 바꿔서 여러개로 늘어나게 해야하는 듯? 몰라
+        return items.count          // 아마 배열로 바꿔서 여러개로 늘어나게 해야하는 듯? 몰라
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SiteAddress", for: indexPath) as! MainTableViewCell
-        cell.List.text = receivedText
-
-        // Configure the cell...
-
+        cell.List.text = items[indexPath.row]
+        print(items[0])
         return cell
     }
     
