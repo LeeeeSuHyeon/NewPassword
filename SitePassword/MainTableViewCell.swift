@@ -13,7 +13,7 @@ class MainTableViewCell: UITableViewCell {
 //    }
 
     @IBOutlet weak var List: UILabel!
-    var recivedText : String?  
+   // var recivedText : String?  
    
     override func awakeFromNib() {
         super.awakeFromNib()

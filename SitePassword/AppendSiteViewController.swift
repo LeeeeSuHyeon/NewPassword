@@ -9,8 +9,8 @@ import UIKit
 
 class AppendSiteViewController: UIViewController {
     
-    
 
+    
     @IBOutlet weak var lbltitle: UILabel!
     @IBOutlet weak var txtSiteAddress: UITextField!
     @IBAction func btnSite(_ sender: UIButton) {
@@ -19,8 +19,8 @@ class AppendSiteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

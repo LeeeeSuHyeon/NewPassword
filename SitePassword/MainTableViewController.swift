@@ -11,12 +11,12 @@ class MainTableViewController: UITableViewController{
 //    @IBAction func appendSite(_ sender: Any) {
 //    }
     var receivedText : String?              // AppendSiteController에서 prepare로 보낸 텍스트 들어옴. 옵셔널 형
-    var items = [String]()
+    var items = [String]()                  // String형 배열 생성
         override func viewDidLoad() {
         super.viewDidLoad()
             if let item = receivedText{
                 items.append(item)
-                self.tableView.reloadSections(IndexSet(1...1), with: .automatic)
+                self.tableView.reloadSections(IndexSet(1...1), with: .automatic) // 섹션 1번을 새로고침 한다.
             }
     }
     
@@ -36,7 +36,8 @@ class MainTableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SiteAddress", for: indexPath) as! MainTableViewCell
         cell.List.text = items[indexPath.row]
-        print(items[0])
+    
+        print(indexPath.row, items.count)
         return cell
     }
     
