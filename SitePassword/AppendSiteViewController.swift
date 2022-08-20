@@ -13,7 +13,7 @@ class AppendSiteViewController: UIViewController {
     
    // @IBOutlet weak var lbltitle: UILabel!
     var idDictinary = [String? : String?]()
-    var x = 1
+    let idpw = IdPasswordViewController()
     @IBOutlet weak var txtSiteAddress: UITextField!
     @IBOutlet weak var txtSiteID: UITextField!
     @IBOutlet weak var txtSitePassword: UITextField!
@@ -34,9 +34,20 @@ class AppendSiteViewController: UIViewController {
             }
             idDictinary.updateValue(txtSitePassword.text, forKey: txtSiteID.text)
             print(idDictinary)
+            if let ip = storyboard?.instantiateViewController(withIdentifier: "idPasswordViewController") as? IdPasswordViewController{
+//                ip.getID.text = idDictinary.keys ?? nil
+//                ip.getpw = idDictinary.values
+                ip.get = idDictinary
+                self.navigationController?.pushViewController(ip, animated: true)
+                print(ip.get, idDictinary)
+            
+//            idpw.get = idDictinary
+//            self.present(idpw, animated: false, completion: nil)
+            
+            }
         }
     }
-
+}
     
 
     /*
@@ -49,4 +60,4 @@ class AppendSiteViewController: UIViewController {
     }
     */
 
-}
+

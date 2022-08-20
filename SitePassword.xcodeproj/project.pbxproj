@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB107AC128B0EE7900C915F3 /* IdPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB107AC028B0EE7900C915F3 /* IdPasswordViewController.swift */; };
 		CB1FE51528A789D700DAC509 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1FE51428A789D700DAC509 /* AppDelegate.swift */; };
 		CB1FE51728A789D700DAC509 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1FE51628A789D700DAC509 /* SceneDelegate.swift */; };
 		CB1FE51928A789D700DAC509 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1FE51828A789D700DAC509 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB107AC028B0EE7900C915F3 /* IdPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdPasswordViewController.swift; sourceTree = "<group>"; };
 		CB1FE51128A789D700DAC509 /* SitePassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SitePassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1FE51428A789D700DAC509 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB1FE51628A789D700DAC509 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				CBDCC71128A79BF400E3D1C5 /* MainTableViewController.swift */,
 				CB348C7928A927C200BD6A02 /* MainTableViewCell.swift */,
 				CB1FE52828A7900900DAC509 /* AppendSiteViewController.swift */,
+				CB107AC028B0EE7900C915F3 /* IdPasswordViewController.swift */,
 				CB1FE51A28A789D700DAC509 /* Main.storyboard */,
 				CB1FE51D28A789D700DAC509 /* Assets.xcassets */,
 				CB1FE51F28A789D700DAC509 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				CBDCC71228A79BF400E3D1C5 /* MainTableViewController.swift in Sources */,
 				CB348C7A28A927C200BD6A02 /* MainTableViewCell.swift in Sources */,
 				CB1FE51728A789D700DAC509 /* SceneDelegate.swift in Sources */,
+				CB107AC128B0EE7900C915F3 /* IdPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
