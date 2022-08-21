@@ -28,36 +28,25 @@ class AppendSiteViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "gotoMain"{
+            idDictinary.updateValue(txtSitePassword.text, forKey: txtSiteID.text)
             if let vc = segue.destination as? MainTableViewController{
                 vc.receivedText = txtSiteAddress.text
+                vc.reciveDictinary = idDictinary
             }
-            idDictinary.updateValue(txtSitePassword.text, forKey: txtSiteID.text)
-            print(idDictinary)
-            if let ip = storyboard?.instantiateViewController(withIdentifier: "idPasswordViewController") as? IdPasswordViewController{
-//                ip.getID.text = idDictinary.keys ?? nil
-//                ip.getpw = idDictinary.values
-                ip.get = idDictinary
-                self.navigationController?.pushViewController(ip, animated: true)
-                print(ip.get, idDictinary)
+
+// 
+////                ip.getID.text = idDictinary.keys ?? nil
+////                ip.getpw = idDictinary.values
+//                
+////              
+//                print(ip.get, idDictinary)
             
 //            idpw.get = idDictinary
 //            self.present(idpw, animated: false, completion: nil)
             
-            }
+//            }
         }
     }
 }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
