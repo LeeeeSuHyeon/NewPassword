@@ -20,12 +20,10 @@ class MainTableViewController: UITableViewController{
                 self.tableView.reloadSections(IndexSet(1...1), with: .automatic) // 섹션 1번을 새로고침 한다.
                 print(reciveDictinary)       // AppendSiteController에서 dictionary 제대로 받아옴.
             }
-            if let ip = storyboard?.instantiateViewController(withIdentifier: "idPasswordViewController") as? IdPasswordViewController{
-                ip.get = reciveDictinary
-                self.navigationController?.pushViewController(ip, animated: true)
-            }
-    }
+
     
+    }
+
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,4 +40,11 @@ class MainTableViewController: UITableViewController{
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let ip = storyboard?.instantiateViewController(withIdentifier: "idPasswordViewController") as? IdPasswordViewController{
+            ip.get = reciveDictinary
+            self.navigationController?.pushViewController(ip, animated: true)
+            }
+    }
 }
+

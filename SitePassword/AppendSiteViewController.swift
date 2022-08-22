@@ -34,6 +34,7 @@ class AppendSiteViewController: UIViewController {
             if let vc = segue.destination as? MainTableViewController{
                 vc.receivedText = txtSiteAddress.text
                 vc.reciveDictinary = idDictinary
+                idpw.get = idDictinary 
             }
 
 // 

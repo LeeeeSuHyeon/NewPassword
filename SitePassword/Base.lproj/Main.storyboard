@@ -41,7 +41,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="List" destination="DdK-cw-eTC" id="PRL-Qf-rLz"/>
-                                    <segue destination="Mzy-cr-JBF" kind="show" identifier="IdPassword" id="rA3-iM-WzY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -122,7 +121,7 @@
                                 <rect key="frame" x="60" y="405" width="294" height="34"/>
                                 <color key="backgroundColor" red="0.01420672749" green="0.96841138599999999" blue="0.065300063840000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ED-6I-Edg">
                                 <rect key="frame" x="60" y="362" width="84" height="20.5"/>
@@ -175,7 +174,7 @@
             <objects>
                 <viewController storyboardIdentifier="idPasswordViewController" title="ID &amp; Password" id="Mzy-cr-JBF" customClass="IdPasswordViewController" customModule="SitePassword" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5It-CL-BP3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m0-83-CTc">
@@ -240,7 +239,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SHa-a0-SuW"/>
         <segue reference="URo-rU-ThO"/>
     </inferredMetricsTieBreakers>
     <resources>
