@@ -13,13 +13,16 @@ class AppendSiteViewController: UIViewController {
     
    // @IBOutlet weak var lbltitle: UILabel!
     var idDictinary = [String? : String?]()
-    let idpw = IdPasswordViewController()
+   // let idpw = IdPasswordViewController()
+    let tableview = MainTableViewController()
+    
     @IBOutlet weak var txtSiteAddress: UITextField!
     @IBOutlet weak var txtSiteID: UITextField!
     @IBOutlet weak var txtSitePassword: UITextField!
     
     @IBAction func btnSite(_ sender: UIButton) {
          performSegue(withIdentifier: "gotoMain", sender: nil)  // segue로 MainTableController로 이동
+
     }
     
     override func viewDidLoad() {
@@ -34,8 +37,13 @@ class AppendSiteViewController: UIViewController {
             if let vc = segue.destination as? MainTableViewController{
                 vc.receivedText = txtSiteAddress.text
                 vc.reciveDictinary = idDictinary
-                idpw.get = idDictinary 
+                
+         //       idpw.get = idDictinary
             }
+//            if let text = txtSiteAddress.text{
+//                tableview.items.append(text)
+//                tableview.tableView.reloadData()
+//            }
 
 // 
 ////                ip.getID.text = idDictinary.keys ?? nil

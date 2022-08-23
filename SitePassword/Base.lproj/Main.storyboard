@@ -239,6 +239,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="SHa-a0-SuW"/>
         <segue reference="URo-rU-ThO"/>
     </inferredMetricsTieBreakers>
     <resources>
