@@ -58,7 +58,7 @@ class MainTableViewController: UITableViewController{
     // https://velog.io/@dvhuni/UITableView-Header-Footer-View-한번에-만들기      headerfooter layout 블로그
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let myLabel = UILabel()
-        myLabel.frame = CGRect(x:0, y:8, width: view.bounds.width, height: 40)
+        myLabel.frame = CGRect(x:0, y:0, width: view.bounds.width, height: 40)
         myLabel.font = UIFont.boldSystemFont(ofSize: 20)
         myLabel.backgroundColor = UIColor.lightGray
         myLabel.textAlignment = .center
