@@ -17,18 +17,16 @@ class MainTableViewController: UITableViewController{
     
         override func viewDidLoad() {
         super.viewDidLoad()
-
-
     
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if let item = receivedText{
-            items.append(item)
-            self.tableView.reloadSections(IndexSet(0...0), with: .automatic) // 섹션 1번을 새로고침 한다.
-            print(reciveDictinary)       // AppendSiteController에서 dictionary 제대로 받아옴.
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        if let item = receivedText{
+//            items.append(item)
+//            self.tableView.reloadSections(IndexSet(0...0), with: .automatic) // 섹션 1번을 새로고침 한다.
+//            print(reciveDictinary)       // AppendSiteController에서 dictionary 제대로 받아옴.
+//        }
+//    }
 
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -49,7 +47,7 @@ class MainTableViewController: UITableViewController{
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count// 아마 배열로 바꿔서 여러개로 늘어나게 해야하는 듯? 몰라
+        return items.count // 아마 배열로 바꿔서 여러개로 늘어나게 해야하는 듯? 몰라
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
